@@ -1,3 +1,3 @@
-def mvn(servicePath, dragLine) {
-    sh 'cd ${servicePath} && mvn -DargLine="${dragLine}"'
+def mvn() {
+    sh 'cd /home/jenkins/CCMService && mvn -DargLine="-Xms2g -Dconfig.resource=local.conf -Dorg.slf4j.simpleLogger.log.scala.slick=warn" clean package'
 }
